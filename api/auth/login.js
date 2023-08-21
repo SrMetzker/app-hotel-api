@@ -50,6 +50,7 @@ loginRoutes.post("/login", (req, res) => {
         return res.status(200).json({
           authorized: true,
           usuario: results[0].usuario || "",
+          nome: results[0].nome || "",
           cargo: results[0].cargo || ""
         });
       else
